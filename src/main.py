@@ -31,5 +31,6 @@ if __name__ == "__main__":
     text = f"Café con IA – {date}\n" + \
            "\n".join(f"- {s['title']}: {s['link']}" for s in stories) + \
            "\n\nPrompts:\n" + "\n".join(prompts)
-    send(html, text)
     print("DEBUG stories:", json.dumps(stories, ensure_ascii=False, indent=2))
+    send(html, text)
+    
