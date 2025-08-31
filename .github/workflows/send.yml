@@ -17,7 +17,7 @@ jobs:
       - name: Test Python execution
         run: python test.py
       - name: Run main script
-        run: python src/main.py
+        run: python -m src.main
         env:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_PASS: ${{ secrets.GMAIL_APP_PASS }}
