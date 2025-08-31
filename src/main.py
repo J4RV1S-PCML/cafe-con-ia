@@ -8,8 +8,10 @@ GMAIL_PASS = os.getenv("GMAIL_PASS")
 RECIPIENTS = json.loads(os.getenv("RECIPIENTS"))
 
 def top10():
-    urls = ["https://venturebeat.com/ai/feed/",
-            "https://www.deeplearning.ai/thebatch/feed/"]
+    urls = [
+    "https://venturebeat.com/ai/feed",  # sin espacio
+    "https://www.deeplearning.ai/thebatch/feed"
+    ]
     items = []
     for u in urls:
         items += feedparser.parse(u).entries
