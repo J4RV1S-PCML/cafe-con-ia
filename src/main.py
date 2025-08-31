@@ -2,7 +2,7 @@ import os, json, smtplib, ssl, datetime
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from jinja2 import Template
-from src.feeds import top10      # nuestro módulo
+from src.feeds import top10  # nuestro módulo
 
 GMAIL_USER = os.getenv("GMAIL_USER")
 GMAIL_PASS = os.getenv("GMAIL_APP_PASS")
@@ -22,7 +22,11 @@ def send(html, text):
 
 if __name__ == "__main__":
     stories = top10()
-    print("DEBUG stories:", json.dumps(stories, ensure_ascii=False, indent=2))  # Línea de debug
+    if stories:
+        print("DEBUG stories:", json.dumps(stories, ensure_ascii=False, indent=2))  # Línea de debug
+    else:
+        print("DEBUG stories: No stories found.")
+    
     prompts = [
         "Prompt 1: ¿Cómo automatizar tus tareas repetitivas hoy con IA?",
         "Prompt 2: Crea un mini-curso de 30 min con ChatGPT y Notion."
@@ -32,5 +36,4 @@ if __name__ == "__main__":
     text = f"Café con IA – {date}\n" + \
            "\n".join(f"- {s['title']}: {s['link']}" for s in stories) + \
            "\n\nPrompts:\n" + "\n".join(prompts)
-        send(html, text)
-    
+    send(html, text)
