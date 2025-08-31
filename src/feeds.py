@@ -1,8 +1,4 @@
-import feedparser, datetime, urllib.request, yaml
-
-def fetch(url: str):
-    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
-    return feedparser.parse(urllib.request.urlopen(req).read())
+import feedparser, datetime, yaml
 
 def load_feeds(path="rss_sources.yml"):
     with open(path, "r", encoding="utf-8") as f:
@@ -11,8 +7,10 @@ def load_feeds(path="rss_sources.yml"):
 def top10():
     urls = load_feeds()
     items = []
-    for u in urls:
-        items += fetch(u).entries
+    for url in urls:
+        feed = feedparser.parse(url)
+        items += feed.entries
+    # fallback fecha
     for e in items:
         if not e.get('published_parsed'):
             e.published_parsed = datetime.datetime.utcnow().timetuple()
