@@ -23,9 +23,20 @@ jobs:
           else
             echo "GMAIL_APP_PASS is SET"
           fi
+      - name: Show GMAIL_PASS env (length)
+        run: |
+          echo "GMAIL_PASS length: ${#GMAIL_PASS}"
+          if [ -z "$GMAIL_PASS" ]; then
+            echo "GMAIL_PASS is EMPTY"
+          else
+            echo "GMAIL_PASS is NOT EMPTY"
+          fi
+        env:
+          GMAIL_PASS: ${{ secrets.GMAIL_APP_PASS }}
       - name: Run main script
         run: python -m src.main
         env:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_PASS: ${{ secrets.TEST_SECRET }}
           GMAIL_PASS: ${{ secrets.GMAIL_APP_PASS }}
           RECIPIENTS: ${{ secrets.RECIPIENTS }}
