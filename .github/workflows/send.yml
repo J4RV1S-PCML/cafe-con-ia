@@ -37,6 +37,5 @@ jobs:
         run: python -m src.main
         env:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
-          GMAIL_PASS: ${{ secrets.TEST_SECRET }}
           GMAIL_PASS: ${{ secrets.GMAIL_APP_PASS }}
           RECIPIENTS: ${{ secrets.RECIPIENTS }}
