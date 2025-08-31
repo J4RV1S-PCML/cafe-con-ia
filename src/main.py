@@ -22,6 +22,7 @@ def send(html, text):
 
 if __name__ == "__main__":
     stories = top10()
+    print("DEBUG stories:", json.dumps(stories, ensure_ascii=False, indent=2))  # Línea de debug
     prompts = [
         "Prompt 1: ¿Cómo automatizar tus tareas repetitivas hoy con IA?",
         "Prompt 2: Crea un mini-curso de 30 min con ChatGPT y Notion."
@@ -31,6 +32,5 @@ if __name__ == "__main__":
     text = f"Café con IA – {date}\n" + \
            "\n".join(f"- {s['title']}: {s['link']}" for s in stories) + \
            "\n\nPrompts:\n" + "\n".join(prompts)
-    print("DEBUG stories:", json.dumps(stories, ensure_ascii=False, indent=2))
-    send(html, text)
+        send(html, text)
     
