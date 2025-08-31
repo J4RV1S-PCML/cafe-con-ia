@@ -24,6 +24,9 @@ if __name__ == "__main__":
     print("DEBUG: Script started", flush=True)
     try:
         import yaml
+        print("DEBUG: GMAIL_USER =", repr(GMAIL_USER), flush=True)
+        print("DEBUG: GMAIL_PASS is set:", bool(GMAIL_PASS), flush=True)
+        print("DEBUG: RECIPIENTS =", repr(RECIPIENTS), flush=True)
         # Mostrar feeds cargados
         with open("rss_sources.yml", "r", encoding="utf-8") as f:
             feeds = yaml.safe_load(f)
@@ -46,6 +49,9 @@ if __name__ == "__main__":
         text = f"Café con IA – {date}\n" + \
                "\n".join(f"- {s['title']}: {s['link']}" for s in stories) + \
                "\n\nPrompts:\n" + "\n".join(prompts)
+        print("DEBUG: About to login to SMTP", flush=True)
+        print("DEBUG: GMAIL_USER =", GMAIL_USER, flush=True)
+        print("DEBUG: GMAIL_PASS length =", len(GMAIL_PASS) if GMAIL_PASS else 0, flush=True)
         send(html, text)
     except Exception as e:
         import traceback
