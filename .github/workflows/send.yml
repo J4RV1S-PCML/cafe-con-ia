@@ -1,0 +1,19 @@
+name: Café con IA - 07:30 ET
+on:
+  schedule:
+    - cron: "30 11 * * *"   # 11:30 UTC = 07:30 ET
+  workflow_dispatch:         # botón manual
+jobs:
+  mail:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+      - run: python src/main.py
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_PASS: ${{ secrets.GMAIL_APP_PASS }}
+          RECIPIENTS: ${{ secrets.RECIPIENTS }}

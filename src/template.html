@@ -1,0 +1,14 @@
+<body style="margin:0;font-family:system-ui;background:#f8f8f8;">
+  <div style="max-width:680px;margin:auto;padding:1rem;">
+    <h2 style="color:#d63384;">☕ Café con IA – {{ date }}</h2>
+    {% for s in stories %}
+      <div style="border-left:4px solid #0d6efd;padding-left:.8rem;margin:.8rem 0;">
+        <a href="{{ s.link }}" style="font-weight:bold;">{{ s.title }}</a><br/>
+        <small>{{ s.summary }}</small>
+      </div>
+    {% endfor %}
+    <hr/>
+    <h3 style="color:#198754;">Prompts de hoy</h3>
+    <ol>{% for p in prompts %}<li>{{ p }}</li>{% endfor %}</ol>
+  </div>
+</body>
