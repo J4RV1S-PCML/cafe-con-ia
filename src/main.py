@@ -5,7 +5,7 @@ from jinja2 import Template
 from src.feeds import top10  # nuestro módulo
 
 GMAIL_USER = os.getenv("GMAIL_USER")
-GMAIL_PASS = os.getenv("GMAIL_APP_PASS")
+GMAIL_PASS = os.getenv("GMAIL_PASS")
 RECIPIENTS = json.loads(os.getenv("RECIPIENTS"))
 
 def send(html, text):
