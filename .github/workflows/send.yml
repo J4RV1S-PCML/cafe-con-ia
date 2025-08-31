@@ -28,17 +28,17 @@ jobs:
           echo "GMAIL_PASS length: ${#GMAIL_PASS}"
           if [ -z "$GMAIL_PASS" ]; then
             echo "GMAIL_PASS is EMPTY"
-            - name: Print env in Python
-              run: python -c "import os; print('GMAIL_PASS:', os.environ.get('GMAIL_PASS')); print('GMAIL_USER:', os.environ.get('GMAIL_USER')); print('RECIPIENTS:', os.environ.get('RECIPIENTS'))"
-              env:
-                GMAIL_USER: ${{ secrets.GMAIL_USER }}
-                GMAIL_PASS: ${{ secrets.GMAIL_APP_PASS }}
-                RECIPIENTS: ${{ secrets.RECIPIENTS }}
           else
             echo "GMAIL_PASS is NOT EMPTY"
           fi
         env:
           GMAIL_PASS: ${{ secrets.GMAIL_APP_PASS }}
+      - name: Print env in Python
+        run: python -c "import os; print('GMAIL_PASS:', os.environ.get('GMAIL_PASS')); print('GMAIL_USER:', os.environ.get('GMAIL_USER')); print('RECIPIENTS:', os.environ.get('RECIPIENTS'))"
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_PASS: ${{ secrets.GMAIL_APP_PASS }}
+          RECIPIENTS: ${{ secrets.RECIPIENTS }}
       - name: Run main script
         run: python -m src.main
         env:
