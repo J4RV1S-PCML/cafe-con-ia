@@ -25,7 +25,15 @@ if __name__ == "__main__":
     try:
         import yaml
         print("DEBUG: GMAIL_USER =", repr(GMAIL_USER), flush=True)
-        print("DEBUG: GMAIL_PASS is set:", bool(GMAIL_PASS), flush=True)
+        print(f"DEBUG: GMAIL_PASS raw repr: {repr(GMAIL_PASS)}", flush=True)
+        if GMAIL_PASS:
+            print(f"DEBUG: GMAIL_PASS length = {len(GMAIL_PASS)}", flush=True)
+            print(f"DEBUG: GMAIL_PASS bytes = {list(GMAIL_PASS.encode())}", flush=True)
+            GMAIL_PASS = GMAIL_PASS.strip()
+            print(f"DEBUG: GMAIL_PASS after strip: {repr(GMAIL_PASS)} length = {len(GMAIL_PASS)}", flush=True)
+            print(f"DEBUG: GMAIL_PASS is set: {bool(GMAIL_PASS)}", flush=True)
+        else:
+            print("DEBUG: GMAIL_PASS is set: False", flush=True)
         print("DEBUG: RECIPIENTS =", repr(RECIPIENTS), flush=True)
         # Mostrar feeds cargados
         with open("rss_sources.yml", "r", encoding="utf-8") as f:
