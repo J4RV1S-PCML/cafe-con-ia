@@ -21,12 +21,20 @@ def send(html, text):
             server.sendmail(GMAIL_USER, r, msg.as_string())
 
 if __name__ == "__main__":
+    import yaml
+    # Mostrar feeds cargados
+    with open("rss_sources.yml", "r", encoding="utf-8") as f:
+        feeds = yaml.safe_load(f)
+    print(f"DEBUG feeds loaded ({len(feeds)}):", feeds, flush=True)
+
     stories = top10()
+    print(f"DEBUG stories count: {len(stories) if stories else 0}", flush=True)
     if stories:
-        print("DEBUG stories:", json.dumps(stories, ensure_ascii=False, indent=2))  # Línea de debug
+        for idx, s in enumerate(stories):
+            print(f"Story {idx+1}: {json.dumps(s, ensure_ascii=False, indent=2)}", flush=True)
     else:
-        print("DEBUG stories: No stories found.")
-    
+        print("DEBUG stories: No stories found.", flush=True)
+
     prompts = [
         "Prompt 1: ¿Cómo automatizar tus tareas repetitivas hoy con IA?",
         "Prompt 2: Crea un mini-curso de 30 min con ChatGPT y Notion."
