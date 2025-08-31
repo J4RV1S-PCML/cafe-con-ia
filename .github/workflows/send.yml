@@ -14,6 +14,13 @@ jobs:
       - run: pip install -r requirements.txt
       - name: List files for debug
         run: ls -lR
+      - name: Debug secrets
+        run: |
+          if [ -z "${{ secrets.GMAIL_APP_PASS }}" ]; then
+            echo "GMAIL_APP_PASS is EMPTY"
+          else
+            echo "GMAIL_APP_PASS is SET"
+          fi
       - name: Test Python execution
         run: python test.py
       - name: Run main script
