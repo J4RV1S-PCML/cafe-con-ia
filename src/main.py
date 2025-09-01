@@ -55,17 +55,15 @@ if __name__ == "__main__":
             trends = yaml.safe_load(f)
         with open("automations.yml", "r", encoding="utf-8") as f:
             automations = yaml.safe_load(f)
-        resources = [
-            {"title": "ChatGPT Smart Workflow Tips (Geeky Gadgets)", "link": "https://www.geeky-gadgets.com/chatgpt-smart-workflow-tips-guide-2025/"},
-            {"title": "The Batch (DeepLearning.AI)", "link": "https://www.deeplearning.ai/thebatch/"}
-        ]
+        with open("videos.yml", "r", encoding="utf-8") as f:
+            videos = yaml.safe_load(f)
         date = datetime.date.today().strftime("%d/%m/%Y")
         html = Template(open("src/template.html").read()).render(
             stories=stories[:10],
             tips=tips,
             trends=trends,
             automations=automations,
-            resources=resources,
+            videos=videos,
             date=date
         )
         text = f"Café con IA – {date}\n" + \
@@ -73,7 +71,7 @@ if __name__ == "__main__":
                "\n\nTips:\n" + "\n".join(f"- {tip['title']}: {tip['link']}" for tip in tips) + \
                "\n\nTendencias:\n" + "\n".join(f"- {trend['title']}: {trend['link']}" for trend in trends) + \
                "\n\nAutomatización:\n" + "\n".join(f"- {auto['title']}: {auto['link']}" for auto in automations) + \
-               "\n\nRecursos:\n" + "\n".join(f"{r['title']}: {r['link']}" for r in resources)
+               "\n\nVideos recomendados:\n" + "\n".join(f"{v['title']}: {v['link']}" for v in videos)
         print("DEBUG: About to login to SMTP", flush=True)
         print("DEBUG: GMAIL_USER =", GMAIL_USER, flush=True)
         print("DEBUG: GMAIL_PASS length =", len(GMAIL_PASS) if GMAIL_PASS else 0, flush=True)
