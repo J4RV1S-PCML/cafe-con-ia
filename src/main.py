@@ -48,49 +48,13 @@ if __name__ == "__main__":
         else:
             print("DEBUG stories: No stories found.", flush=True)
 
-        # Nuevas secciones dinámicas
-        tips = [
-            {
-                "title": "Automatiza tareas repetitivas con ChatGPT y VS Code",
-                "link": "https://www.youtube.com/watch?v=W1rVwLMieag",
-                "desc": "Aprende a integrar OpenAI Codex en VS Code para generar código y automatizar tareas con IA.",
-                "cta": "Ver video"
-            },
-            {
-                "title": "Extensión Codex para Visual Studio Code",
-                "link": "https://hipertextual.com/tecnologia/openai-codex-extension-visual-studio-code/",
-                "desc": "Descubre cómo instalar y sacar el máximo partido a la extensión oficial de OpenAI Codex en tu editor favorito.",
-                "cta": "Leer guía"
-            }
-        ]
-        trends = [
-            {
-                "title": "OpenAI lanza GPT-5",
-                "link": "https://openai.com/blog/gpt-5/",
-                "desc": "GPT-5 llega con capacidades multimodales y mejoras en comprensión contextual.",
-                "cta": "Leer más"
-            },
-            {
-                "title": "Google presenta Gemini",
-                "link": "https://blog.google/technology/ai/google-gemini-ai/",
-                "desc": "La nueva IA de Google para automatización empresarial y análisis avanzado.",
-                "cta": "Ver detalles"
-            }
-        ]
-        automations = [
-            {
-                "title": "Automatiza reportes con Python y Google Sheets",
-                "link": "https://www.youtube.com/watch?v=QFvKjD1bQ6U",
-                "desc": "Tutorial paso a paso para generar y enviar reportes automáticos usando Python y Google Sheets API.",
-                "cta": "Ver tutorial"
-            },
-            {
-                "title": "Conecta APIs sin código con Make",
-                "link": "https://www.make.com/en/",
-                "desc": "Automatiza flujos de trabajo y conecta servicios fácilmente usando Make (antes Integromat).",
-                "cta": "Explorar Make"
-            }
-        ]
+        # Cargar tips, trends y automations desde YAML externo
+        with open("tips.yml", "r", encoding="utf-8") as f:
+            tips = yaml.safe_load(f)
+        with open("trends.yml", "r", encoding="utf-8") as f:
+            trends = yaml.safe_load(f)
+        with open("automations.yml", "r", encoding="utf-8") as f:
+            automations = yaml.safe_load(f)
         resources = [
             {"title": "ChatGPT Smart Workflow Tips (Geeky Gadgets)", "link": "https://www.geeky-gadgets.com/chatgpt-smart-workflow-tips-guide-2025/"},
             {"title": "The Batch (DeepLearning.AI)", "link": "https://www.deeplearning.ai/thebatch/"}

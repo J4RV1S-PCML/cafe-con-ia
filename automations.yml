@@ -1,0 +1,13 @@
+# automations.yml
+- icon: "🤖"
+  image: "https://img.youtube.com/vi/QFvKjD1bQ6U/0.jpg"
+  title: "Automatiza reportes con Python y Google Sheets"
+  link: "https://www.youtube.com/watch?v=QFvKjD1bQ6U"
+  desc: "Tutorial paso a paso para generar y enviar reportes automáticos usando Python y Google Sheets API."
+  cta: "Ver tutorial"
+- icon: "🤖"
+  image: "https://www.make.com/favicon.ico"
+  title: "Conecta APIs sin código con Make"
+  link: "https://www.make.com/en/"
+  desc: "Automatiza flujos de trabajo y conecta servicios fácilmente usando Make (antes Integromat)."
+  cta: "Explorar Make"

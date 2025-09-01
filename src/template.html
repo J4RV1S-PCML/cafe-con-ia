@@ -23,7 +23,7 @@
         {% for tip in tips %}
         <div style="background:#1e2b22;border-left:4px solid #7be495;padding:1rem 1.2rem;border-radius:8px;flex:1 1 280px;color:#f1f3f4;display:flex;flex-direction:column;justify-content:space-between;min-width:240px;max-width:320px;">
           <div style="display:flex;align-items:center;gap:.7rem;">
-            <span style="font-size:1.5rem;">💡</span>
+            {% if tip.image %}<img src="{{ tip.image }}" alt="" style="width:38px;height:38px;border-radius:6px;object-fit:cover;box-shadow:0 1px 4px #0003;">{% else %}<span style="font-size:1.5rem;">💡</span>{% endif %}
             <a href="{{ tip.link }}" style="color:#7be495;font-weight:bold;font-size:1.08rem;text-decoration:none;">{{ tip.title }}</a>
           </div>
           <div style="margin:.7rem 0 .5rem 2.2rem;font-size:.98rem;">{{ tip.desc }}</div>
@@ -40,7 +40,7 @@
         {% for trend in trends %}
         <div style="background:#2a1e2b;border-left:4px solid #e685b5;padding:1rem 1.2rem;border-radius:8px;flex:1 1 280px;color:#f1f3f4;display:flex;flex-direction:column;justify-content:space-between;min-width:240px;max-width:320px;">
           <div style="display:flex;align-items:center;gap:.7rem;">
-            <span style="font-size:1.5rem;">⚡</span>
+            {% if trend.image %}<img src="{{ trend.image }}" alt="" style="width:38px;height:38px;border-radius:6px;object-fit:cover;box-shadow:0 1px 4px #0003;">{% else %}<span style="font-size:1.5rem;">⚡</span>{% endif %}
             <a href="{{ trend.link }}" style="color:#e685b5;font-weight:bold;font-size:1.08rem;text-decoration:none;">{{ trend.title }}</a>
           </div>
           <div style="margin:.7rem 0 .5rem 2.2rem;font-size:.98rem;">{{ trend.desc }}</div>
@@ -57,7 +57,7 @@
         {% for auto in automations %}
         <div style="background:#1e2932;border-left:4px solid #6edff6;padding:1rem 1.2rem;border-radius:8px;flex:1 1 280px;color:#f1f3f4;display:flex;flex-direction:column;justify-content:space-between;min-width:240px;max-width:320px;">
           <div style="display:flex;align-items:center;gap:.7rem;">
-            <span style="font-size:1.5rem;">🤖</span>
+            {% if auto.image %}<img src="{{ auto.image }}" alt="" style="width:38px;height:38px;border-radius:6px;object-fit:cover;box-shadow:0 1px 4px #0003;">{% else %}<span style="font-size:1.5rem;">🤖</span>{% endif %}
             <a href="{{ auto.link }}" style="color:#6edff6;font-weight:bold;font-size:1.08rem;text-decoration:none;">{{ auto.title }}</a>
           </div>
           <div style="margin:.7rem 0 .5rem 2.2rem;font-size:.98rem;">{{ auto.desc }}</div>

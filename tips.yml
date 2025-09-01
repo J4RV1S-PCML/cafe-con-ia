@@ -1,0 +1,13 @@
+# tips.yml
+- icon: "💡"
+  image: "https://img.youtube.com/vi/W1rVwLMieag/0.jpg"
+  title: "Automatiza tareas repetitivas con ChatGPT y VS Code"
+  link: "https://www.youtube.com/watch?v=W1rVwLMieag"
+  desc: "Aprende a integrar OpenAI Codex en VS Code para generar código y automatizar tareas con IA."
+  cta: "Ver video"
+- icon: "💡"
+  image: "https://hipertextual.com/favicon.ico"
+  title: "Extensión Codex para Visual Studio Code"
+  link: "https://hipertextual.com/tecnologia/openai-codex-extension-visual-studio-code/"
+  desc: "Descubre cómo instalar y sacar el máximo partido a la extensión oficial de OpenAI Codex en tu editor favorito."
+  cta: "Leer guía"
