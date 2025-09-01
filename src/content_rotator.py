@@ -1,20 +1,19 @@
 #!/usr/bin/env python3
 """
-Content Rotator - Sistema de rotación automática de contenido IA con seguridad
+Content Rotator - Sistema de rotación automática de contenido IA
 Selecciona contenido aleatorio de las bases de datos YAML expandidas
 para mantener el newsletter fresco y variado.
-Incluye protección contra prompt injection y contenido malicioso.
 """
 import yaml
 import random
 from datetime import datetime
 from typing import Dict, List, Any
 from pathlib import Path
-from src.security_guard import PromptInjectionGuard
+from src.simple_security import SimpleSecurityGuard
 
 
 class ContentRotator:
-    """Maneja la rotación automática de contenido para el newsletter con seguridad integrada"""
+    """Maneja la rotación automática de contenido para el newsletter"""
     
     def __init__(self, base_path: str = "."):
         self.base_path = Path(base_path)
@@ -24,12 +23,12 @@ class ContentRotator:
             'automations': 'automations.yml',
             'videos': 'videos.yml'
         }
-        # 🔒 Inicializar sistema de seguridad
-        self.security_guard = PromptInjectionGuard()
-        print("🔒 Sistema de seguridad iniciado - Protección contra prompt injection activa")
+        # 🔒 Seguridad básica
+        self.security_guard = SimpleSecurityGuard()
+        print("✅ Sistema de rotación iniciado con seguridad básica")
         
     def load_content(self, content_type: str) -> List[Dict[str, Any]]:
-        """Carga el contenido desde archivo YAML con validación de seguridad"""
+        """Carga el contenido desde archivo YAML con validación básica"""
         file_path = self.base_path / self.content_files[content_type]
         try:
             with open(file_path, 'r', encoding='utf-8') as f:
@@ -40,14 +39,24 @@ class ContentRotator:
                 if not isinstance(content, list):
                     return []
                 
-                # 🔒 VALIDACIÓN DE SEGURIDAD PARA CADA ITEM
+                # ✅ Validación básica de seguridad
                 safe_content = []
-                threats_found = 0
                 
                 for item in content:
-                    # Validar campos críticos de cada item
-                    item_safe = True
-                    sanitized_item = item.copy()
+                    if self.security_guard.validate_content(item):
+                        safe_content.append(item)
+                    else:
+                        print(f"⚠️ Item filtrado en {content_type}: {item.get('title', 'Sin título')}")
+                
+                print(f"✅ {content_type}: {len(safe_content)}/{len(content)} items válidos")
+                return safe_content
+                
+        except FileNotFoundError:
+            print(f"⚠️  Archivo no encontrado: {file_path}")
+            return []
+        except Exception as e:
+            print(f"❌ Error al leer YAML {file_path}: {e}")
+            return []
                     
                     # Validar título
                     if 'title' in item:

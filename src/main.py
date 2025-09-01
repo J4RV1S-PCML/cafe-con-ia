@@ -3,7 +3,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from jinja2 import Template
 from src.feeds_simple import top10  # nuestro módulo simplificado
-from src.content_rotator import ContentRotator  # Sistema de rotación automática
+from src.content_rotator_simple import ContentRotator  # Sistema de rotación simplificado
 from src.simple_security import validate_environment, secure_content  # Seguridad básica
 
 GMAIL_USER = os.getenv("GMAIL_USER")
