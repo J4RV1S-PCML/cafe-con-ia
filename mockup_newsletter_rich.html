@@ -6,94 +6,320 @@
 </head>
 <body style="margin:0;font-family:system-ui,Roboto,Arial;background:#181a1b;">
   <div style="max-width:680px;margin:auto;padding:1.5rem;">
-    <!-- Header -->
-    <div style="background:#23272f;color:#f1f3f4;padding:1rem 1.5rem;border-radius:12px 12px 0 0;">
-      <h1 style="margin:0;font-size:2rem;">☕ Café con IA</h1>
-      <div style="font-size:1.1rem;">01/09/2025</div>
+    <!-- Header Mejorado con Gradiente -->
+    <div style="background:linear-gradient(135deg, #2d1b69 0%, #11998e 100%);color:#f1f3f4;padding:2rem 1.5rem;border-radius:16px 16px 0 0;position:relative;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.3);">
+      <div style="position:absolute;top:-20px;right:-20px;width:120px;height:120px;background:rgba(255,255,255,0.05);border-radius:50%;"></div>
+      <div style="position:absolute;bottom:-30px;left:-30px;width:80px;height:80px;background:rgba(255,255,255,0.03);border-radius:50%;"></div>
+      <div style="display:flex;align-items:center;gap:1rem;position:relative;z-index:2;">
+        <div style="background:rgba(255,255,255,0.1);padding:0.8rem;border-radius:12px;backdrop-filter:blur(10px);">
+          <span style="font-size:2.2rem;display:block;">☕</span>
+        </div>
+        <div style="flex:1;">
+          <h1 style="margin:0;font-size:2.4rem;font-weight:700;background:linear-gradient(45deg, #fff, #a8edea);background-clip:text;-webkit-background-clip:text;color:transparent;text-shadow:0 2px 4px rgba(0,0,0,0.3);">Café con IA</h1>
+          <div style="font-size:1.1rem;opacity:0.9;margin-top:0.3rem;display:flex;align-items:center;gap:0.5rem;">
+            <span style="font-size:0.9rem;">📅</span>
+            01/09/2025
+            <span style="margin-left:1rem;background:rgba(255,255,255,0.15);padding:0.2rem 0.8rem;border-radius:20px;font-size:0.85rem;">Daily Edition</span>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- Noticias (cards como antes) -->
-    <div style="background:#23272f;padding:1.5rem;border-radius:0 0 12px 12px;box-shadow:0 2px 8px #0003;">
-      <h2 style="color:#6ea8fe;margin-top:0;">📰 Top Noticias</h2>
-      <div style="border:1px solid #2c313a;border-radius:8px;padding:1rem;margin:1rem 0;box-shadow:0 1px 4px #0003;background:#22223b;">
-        <a href="#" style="font-weight:bold;font-size:1.1rem;color:#6ea8fe;text-decoration:none;">Cómo 'Clanker' se volvió un grito anti-IA</a>
-        <div style="color:#f1f3f4;margin:.5rem 0;">El término, popularizado por Star Wars, se ha convertido en un insulto contra la inteligencia artificial y los robots...</div>
-      </div>
-
-      <!-- Tips enriquecidos -->
-      <h2 style="color:#7be495;margin-top:2rem;">💡 Tips & Mejores Prácticas</h2>
-      <div style="display:flex;flex-wrap:wrap;gap:1rem;">
-        <div style="background:#1e2b22;border-left:4px solid #7be495;padding:1rem 1.2rem;border-radius:8px;flex:1 1 280px;color:#f1f3f4;display:flex;flex-direction:column;justify-content:space-between;min-width:240px;max-width:320px;">
-          <div style="display:flex;align-items:center;gap:.7rem;">
-            <span style="font-size:1.5rem;">💡</span>
-            <a href="https://www.youtube.com/watch?v=W1rVwLMieag" style="color:#7be495;font-weight:bold;font-size:1.08rem;text-decoration:none;">Automatiza tareas repetitivas con ChatGPT y VS Code</a>
+    <!-- Contenido Principal -->
+    <div style="background:#1a1d23;padding:2rem;border-radius:0 0 16px 16px;box-shadow:0 8px 32px rgba(0,0,0,0.4);position:relative;">
+      
+      <!-- Separador con Gradiente -->
+      <div style="height:3px;background:linear-gradient(90deg, transparent, #6ea8fe, transparent);margin:0 0 2rem 0;border-radius:2px;"></div>
+      
+      <!-- Noticias con Diseño Mejorado -->
+      <div style="margin-bottom:3rem;">
+        <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;">
+          <div style="background:linear-gradient(135deg, #4dabf7, #339af0);padding:0.7rem;border-radius:12px;box-shadow:0 4px 12px rgba(77,171,247,0.3);">
+            <span style="font-size:1.4rem;color:white;">📰</span>
           </div>
-          <div style="margin:.7rem 0 .5rem 2.2rem;font-size:.98rem;">Aprende a integrar OpenAI Codex en VS Code para generar código y automatizar tareas con IA.</div>
-          <a href="https://www.youtube.com/watch?v=W1rVwLMieag" style="margin-left:2.2rem;color:#6ea8fe;font-size:.97rem;text-decoration:underline;">Ver video</a>
+          <div>
+            <h2 style="color:#e3f2fd;margin:0;font-size:1.8rem;font-weight:700;">Top Noticias</h2>
+            <div style="color:#90a4ae;font-size:0.95rem;margin-top:0.2rem;">Actualizaciones frescas del mundo IA</div>
+          </div>
+          <div style="margin-left:auto;background:rgba(110,168,254,0.1);border:1px solid rgba(110,168,254,0.3);padding:0.4rem 1rem;border-radius:20px;color:#6ea8fe;font-size:0.85rem;font-weight:500;">
+            🔥 Trending
+          </div>
         </div>
-        <div style="background:#1e2b22;border-left:4px solid #7be495;padding:1rem 1.2rem;border-radius:8px;flex:1 1 280px;color:#f1f3f4;display:flex;flex-direction:column;justify-content:space-between;min-width:240px;max-width:320px;">
-          <div style="display:flex;align-items:center;gap:.7rem;">
-            <span style="font-size:1.5rem;">💡</span>
-            <a href="https://hipertextual.com/tecnologia/openai-codex-extension-visual-studio-code/" style="color:#7be495;font-weight:bold;font-size:1.08rem;text-decoration:none;">Extensión Codex para Visual Studio Code</a>
+        
+        <div style="background:linear-gradient(135deg, #22223b 0%, #2a2d3a 100%);border:1px solid #3c4043;border-radius:12px;padding:1.5rem;box-shadow:0 4px 16px rgba(0,0,0,0.2);position:relative;overflow:hidden;">
+          <div style="position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(180deg, #6ea8fe, #4dabf7);"></div>
+          <div style="display:flex;align-items:flex-start;gap:1rem;">
+            <div style="flex-shrink:0;width:40px;height:40px;background:linear-gradient(135deg, #6ea8fe, #4dabf7);border-radius:10px;display:flex;align-items:center;justify-content:center;box-shadow:0 3px 8px rgba(77,171,247,0.4);">
+              <span style="font-size:1.2rem;color:white;">🔥</span>
+            </div>
+            <div style="flex:1;">
+              <a href="#" style="font-weight:bold;font-size:1.2rem;color:#e3f2fd;text-decoration:none;line-height:1.4;display:block;margin-bottom:0.8rem;">Cómo 'Clanker' se volvió un grito anti-IA</a>
+              <div style="color:#b0bec5;margin-bottom:1rem;line-height:1.5;">El término, popularizado por Star Wars, se ha convertido en un insulto contra la inteligencia artificial y los robots...</div>
+              <div style="display:flex;align-items:center;gap:1rem;">
+                <a href="#" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.5rem 1.2rem;background:linear-gradient(135deg, #6ea8fe, #4dabf7);color:white;font-weight:600;border-radius:8px;font-size:0.9rem;text-decoration:none;box-shadow:0 2px 8px rgba(77,171,247,0.3);transition:all 0.2s;">
+                  <span>📖</span> Leer más
+                </a>
+                <div style="color:#78909c;font-size:0.85rem;display:flex;align-items:center;gap:0.3rem;">
+                  <span>⏱️</span> 3 min de lectura
+                </div>
+              </div>
+            </div>
           </div>
-          <div style="margin:.7rem 0 .5rem 2.2rem;font-size:.98rem;">Descubre cómo instalar y sacar el máximo partido a la extensión oficial de OpenAI Codex en tu editor favorito.</div>
-          <a href="https://hipertextual.com/tecnologia/openai-codex-extension-visual-studio-code/" style="margin-left:2.2rem;color:#6ea8fe;font-size:.97rem;text-decoration:underline;">Leer guía</a>
-        </div>
-      </div>
-
-      <!-- Tendencias enriquecidas -->
-      <h2 style="color:#e685b5;margin-top:2rem;">⚡ Tendencias & Avances</h2>
-      <div style="display:flex;flex-wrap:wrap;gap:1rem;">
-        <div style="background:#2a1e2b;border-left:4px solid #e685b5;padding:1rem 1.2rem;border-radius:8px;flex:1 1 280px;color:#f1f3f4;display:flex;flex-direction:column;justify-content:space-between;min-width:240px;max-width:320px;">
-          <div style="display:flex;align-items:center;gap:.7rem;">
-            <span style="font-size:1.5rem;">⚡</span>
-            <a href="https://openai.com/blog/gpt-5/" style="color:#e685b5;font-weight:bold;font-size:1.08rem;text-decoration:none;">OpenAI lanza GPT-5</a>
-          </div>
-          <div style="margin:.7rem 0 .5rem 2.2rem;font-size:.98rem;">GPT-5 llega con capacidades multimodales y mejoras en comprensión contextual.</div>
-          <a href="https://openai.com/blog/gpt-5/" style="margin-left:2.2rem;color:#6ea8fe;font-size:.97rem;text-decoration:underline;">Leer más</a>
-        </div>
-        <div style="background:#2a1e2b;border-left:4px solid #e685b5;padding:1rem 1.2rem;border-radius:8px;flex:1 1 280px;color:#f1f3f4;display:flex;flex-direction:column;justify-content:space-between;min-width:240px;max-width:320px;">
-          <div style="display:flex;align-items:center;gap:.7rem;">
-            <span style="font-size:1.5rem;">⚡</span>
-            <a href="https://blog.google/technology/ai/google-gemini-ai/" style="color:#e685b5;font-weight:bold;font-size:1.08rem;text-decoration:none;">Google presenta Gemini</a>
-          </div>
-          <div style="margin:.7rem 0 .5rem 2.2rem;font-size:.98rem;">La nueva IA de Google para automatización empresarial y análisis avanzado.</div>
-          <a href="https://blog.google/technology/ai/google-gemini-ai/" style="margin-left:2.2rem;color:#6ea8fe;font-size:.97rem;text-decoration:underline;">Ver detalles</a>
         </div>
       </div>
 
-      <!-- Automatización enriquecida -->
-      <h2 style="color:#6edff6;margin-top:2rem;">🤖 Automatización & Funcionalidades</h2>
-      <div style="display:flex;flex-wrap:wrap;gap:1rem;">
-        <div style="background:#1e2932;border-left:4px solid #6edff6;padding:1rem 1.2rem;border-radius:8px;flex:1 1 280px;color:#f1f3f4;display:flex;flex-direction:column;justify-content:space-between;min-width:240px;max-width:320px;">
-          <div style="display:flex;align-items:center;gap:.7rem;">
-            <span style="font-size:1.5rem;">🤖</span>
-            <a href="https://www.youtube.com/watch?v=QFvKjD1bQ6U" style="color:#6edff6;font-weight:bold;font-size:1.08rem;text-decoration:none;">Automatiza reportes con Python y Google Sheets</a>
+      <!-- Tips Enriquecidos con Diseño Premium -->
+      <div style="margin-bottom:3rem;">
+        <!-- Separador con Gradiente Verde -->
+        <div style="height:2px;background:linear-gradient(90deg, transparent, #7be495, transparent);margin:2rem 0 1.5rem 0;border-radius:1px;"></div>
+        
+        <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;">
+          <div style="background:linear-gradient(135deg, #51cf66, #37b24d);padding:0.7rem;border-radius:12px;box-shadow:0 4px 12px rgba(123,228,149,0.3);">
+            <span style="font-size:1.4rem;color:white;">💡</span>
           </div>
-          <div style="margin:.7rem 0 .5rem 2.2rem;font-size:.98rem;">Tutorial paso a paso para generar y enviar reportes automáticos usando Python y Google Sheets API.</div>
-          <a href="https://www.youtube.com/watch?v=QFvKjD1bQ6U" style="margin-left:2.2rem;color:#6ea8fe;font-size:.97rem;text-decoration:underline;">Ver tutorial</a>
+          <div>
+            <h2 style="color:#c8e6c9;margin:0;font-size:1.8rem;font-weight:700;">Tips & Mejores Prácticas</h2>
+            <div style="color:#81c784;font-size:0.95rem;margin-top:0.2rem;">Potencia tu flujo de trabajo con IA</div>
+          </div>
+          <div style="margin-left:auto;background:rgba(123,228,149,0.15);border:1px solid rgba(123,228,149,0.3);padding:0.4rem 1rem;border-radius:20px;color:#7be495;font-size:0.85rem;font-weight:500;">
+            ⚡ Pro Tips
+          </div>
         </div>
-        <div style="background:#1e2932;border-left:4px solid #6edff6;padding:1rem 1.2rem;border-radius:8px;flex:1 1 280px;color:#f1f3f4;display:flex;flex-direction:column;justify-content:space-between;min-width:240px;max-width:320px;">
-          <div style="display:flex;align-items:center;gap:.7rem;">
-            <span style="font-size:1.5rem;">🤖</span>
-            <a href="https://www.make.com/en/" style="color:#6edff6;font-weight:bold;font-size:1.08rem;text-decoration:none;">Conecta APIs sin código con Make</a>
+        
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;">
+          <div style="background:linear-gradient(135deg, #1e2b22 0%, #2d4a32 100%);border-left:4px solid #7be495;padding:1.5rem;border-radius:12px;color:#f1f3f4;box-shadow:0 6px 20px rgba(0,0,0,0.3);position:relative;overflow:hidden;transition:all 0.3s ease;">
+            <div style="position:absolute;top:-10px;right:-10px;width:60px;height:60px;background:rgba(123,228,149,0.1);border-radius:50%;"></div>
+            <div style="display:flex;align-items:flex-start;gap:1rem;margin-bottom:1rem;position:relative;z-index:2;">
+              <div style="flex-shrink:0;width:48px;height:48px;background:linear-gradient(135deg, #7be495, #51cf66);border-radius:12px;display:flex;align-items:center;justify-content:center;box-shadow:0 3px 12px rgba(123,228,149,0.4);">
+                <span style="font-size:1.3rem;color:white;">💡</span>
+              </div>
+              <div style="flex:1;">
+                <a href="https://www.youtube.com/watch?v=W1rVwLMieag" style="color:#c8e6c9;font-weight:bold;font-size:1.15rem;text-decoration:none;line-height:1.3;display:block;">Automatiza tareas repetitivas con ChatGPT y VS Code</a>
+                <div style="display:flex;align-items:center;gap:0.5rem;margin-top:0.5rem;">
+                  <span style="background:rgba(123,228,149,0.2);color:#7be495;padding:0.2rem 0.6rem;border-radius:12px;font-size:0.75rem;font-weight:500;">YouTube</span>
+                  <span style="color:#81c784;font-size:0.85rem;">⏱️ 12 min</span>
+                </div>
+              </div>
+            </div>
+            <div style="margin-bottom:1.5rem;color:#b0bec5;font-size:1rem;line-height:1.5;">Aprende a integrar OpenAI Codex en VS Code para generar código y automatizar tareas con IA.</div>
+            <a href="https://www.youtube.com/watch?v=W1rVwLMieag" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.6rem 1.3rem;background:linear-gradient(135deg, #7be495, #51cf66);color:white;font-weight:600;border-radius:8px;font-size:0.9rem;text-decoration:none;box-shadow:0 3px 10px rgba(123,228,149,0.3);transition:all 0.2s;">
+              <span>🎬</span> Ver video
+            </a>
           </div>
-          <div style="margin:.7rem 0 .5rem 2.2rem;font-size:.98rem;">Automatiza flujos de trabajo y conecta servicios fácilmente usando Make (antes Integromat).</div>
-          <a href="https://www.make.com/en/" style="margin-left:2.2rem;color:#6ea8fe;font-size:.97rem;text-decoration:underline;">Explorar Make</a>
+          
+          <div style="background:linear-gradient(135deg, #1e2b22 0%, #2d4a32 100%);border-left:4px solid #7be495;padding:1.5rem;border-radius:12px;color:#f1f3f4;box-shadow:0 6px 20px rgba(0,0,0,0.3);position:relative;overflow:hidden;transition:all 0.3s ease;">
+            <div style="position:absolute;top:-10px;right:-10px;width:60px;height:60px;background:rgba(123,228,149,0.1);border-radius:50%;"></div>
+            <div style="display:flex;align-items:flex-start;gap:1rem;margin-bottom:1rem;position:relative;z-index:2;">
+              <div style="flex-shrink:0;width:48px;height:48px;background:linear-gradient(135deg, #7be495, #51cf66);border-radius:12px;display:flex;align-items:center;justify-content:center;box-shadow:0 3px 12px rgba(123,228,149,0.4);">
+                <span style="font-size:1.3rem;color:white;">�</span>
+              </div>
+              <div style="flex:1;">
+                <a href="https://hipertextual.com/tecnologia/openai-codex-extension-visual-studio-code/" style="color:#c8e6c9;font-weight:bold;font-size:1.15rem;text-decoration:none;line-height:1.3;display:block;">Extensión Codex para Visual Studio Code</a>
+                <div style="display:flex;align-items:center;gap:0.5rem;margin-top:0.5rem;">
+                  <span style="background:rgba(123,228,149,0.2);color:#7be495;padding:0.2rem 0.6rem;border-radius:12px;font-size:0.75rem;font-weight:500;">Artículo</span>
+                  <span style="color:#81c784;font-size:0.85rem;">⏱️ 5 min</span>
+                </div>
+              </div>
+            </div>
+            <div style="margin-bottom:1.5rem;color:#b0bec5;font-size:1rem;line-height:1.5;">Descubre cómo instalar y sacar el máximo partido a la extensión oficial de OpenAI Codex en tu editor favorito.</div>
+            <a href="https://hipertextual.com/tecnologia/openai-codex-extension-visual-studio-code/" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.6rem 1.3rem;background:linear-gradient(135deg, #7be495, #51cf66);color:white;font-weight:600;border-radius:8px;font-size:0.9rem;text-decoration:none;box-shadow:0 3px 10px rgba(123,228,149,0.3);transition:all 0.2s;">
+              <span>📚</span> Leer guía
+            </a>
+          </div>
         </div>
       </div>
 
-      <!-- Recursos -->
-      <h2 style="color:#f1f3f4;margin-top:2rem;">🔗 Recursos Recomendados</h2>
-      <ul>
-        <li><a href="https://www.geeky-gadgets.com/chatgpt-smart-workflow-tips-guide-2025/" style="color:#6ea8fe;">ChatGPT Smart Workflow Tips (Geeky Gadgets)</a></li>
-        <li><a href="https://www.deeplearning.ai/thebatch/" style="color:#6ea8fe;">The Batch (DeepLearning.AI)</a></li>
-      </ul>
+      <!-- Tendencias con Diseño Moderno -->
+      <div style="margin-bottom:3rem;">
+        <!-- Separador con Gradiente Rosa -->
+        <div style="height:2px;background:linear-gradient(90deg, transparent, #e685b5, transparent);margin:2rem 0 1.5rem 0;border-radius:1px;"></div>
+        
+        <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;">
+          <div style="background:linear-gradient(135deg, #f06292, #e91e63);padding:0.7rem;border-radius:12px;box-shadow:0 4px 12px rgba(230,133,181,0.3);">
+            <span style="font-size:1.4rem;color:white;">⚡</span>
+          </div>
+          <div>
+            <h2 style="color:#fce4ec;margin:0;font-size:1.8rem;font-weight:700;">Tendencias & Avances</h2>
+            <div style="color:#f8bbd9;font-size:0.95rem;margin-top:0.2rem;">Lo más innovador en IA</div>
+          </div>
+          <div style="margin-left:auto;background:rgba(230,133,181,0.15);border:1px solid rgba(230,133,181,0.3);padding:0.4rem 1rem;border-radius:20px;color:#e685b5;font-size:0.85rem;font-weight:500;">
+            🚀 Nuevos
+          </div>
+        </div>
+        
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;">
+          <div style="background:linear-gradient(135deg, #2a1e2b 0%, #3d2a3e 100%);border-left:4px solid #e685b5;padding:1.5rem;border-radius:12px;color:#f1f3f4;box-shadow:0 6px 20px rgba(0,0,0,0.3);position:relative;overflow:hidden;">
+            <div style="position:absolute;top:-10px;right:-10px;width:60px;height:60px;background:rgba(230,133,181,0.1);border-radius:50%;"></div>
+            <div style="display:flex;align-items:flex-start;gap:1rem;margin-bottom:1rem;position:relative;z-index:2;">
+              <div style="flex-shrink:0;width:48px;height:48px;background:linear-gradient(135deg, #e685b5, #f06292);border-radius:12px;display:flex;align-items:center;justify-content:center;box-shadow:0 3px 12px rgba(230,133,181,0.4);">
+                <span style="font-size:1.3rem;color:white;">🚀</span>
+              </div>
+              <div style="flex:1;">
+                <a href="https://openai.com/blog/gpt-5/" style="color:#fce4ec;font-weight:bold;font-size:1.15rem;text-decoration:none;line-height:1.3;display:block;">OpenAI lanza GPT-5</a>
+                <div style="display:flex;align-items:center;gap:0.5rem;margin-top:0.5rem;">
+                  <span style="background:rgba(230,133,181,0.2);color:#e685b5;padding:0.2rem 0.6rem;border-radius:12px;font-size:0.75rem;font-weight:500;">BREAKING</span>
+                  <span style="color:#f8bbd9;font-size:0.85rem;">🔥 Trending</span>
+                </div>
+              </div>
+            </div>
+            <div style="margin-bottom:1.5rem;color:#b0bec5;font-size:1rem;line-height:1.5;">GPT-5 llega con capacidades multimodales y mejoras en comprensión contextual.</div>
+            <a href="https://openai.com/blog/gpt-5/" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.6rem 1.3rem;background:linear-gradient(135deg, #e685b5, #f06292);color:white;font-weight:600;border-radius:8px;font-size:0.9rem;text-decoration:none;box-shadow:0 3px 10px rgba(230,133,181,0.3);">
+              <span>🔍</span> Leer más
+            </a>
+          </div>
+          
+          <div style="background:linear-gradient(135deg, #2a1e2b 0%, #3d2a3e 100%);border-left:4px solid #e685b5;padding:1.5rem;border-radius:12px;color:#f1f3f4;box-shadow:0 6px 20px rgba(0,0,0,0.3);position:relative;overflow:hidden;">
+            <div style="position:absolute;top:-10px;right:-10px;width:60px;height:60px;background:rgba(230,133,181,0.1);border-radius:50%;"></div>
+            <div style="display:flex;align-items:flex-start;gap:1rem;margin-bottom:1rem;position:relative;z-index:2;">
+              <div style="flex-shrink:0;width:48px;height:48px;background:linear-gradient(135deg, #e685b5, #f06292);border-radius:12px;display:flex;align-items:center;justify-content:center;box-shadow:0 3px 12px rgba(230,133,181,0.4);">
+                <span style="font-size:1.3rem;color:white;">🎯</span>
+              </div>
+              <div style="flex:1;">
+                <a href="https://blog.google/technology/ai/google-gemini-ai/" style="color:#fce4ec;font-weight:bold;font-size:1.15rem;text-decoration:none;line-height:1.3;display:block;">Google presenta Gemini</a>
+                <div style="display:flex;align-items:center;gap:0.5rem;margin-top:0.5rem;">
+                  <span style="background:rgba(230,133,181,0.2);color:#e685b5;padding:0.2rem 0.6rem;border-radius:12px;font-size:0.75rem;font-weight:500;">Google</span>
+                  <span style="color:#f8bbd9;font-size:0.85rem;">⭐ Destacado</span>
+                </div>
+              </div>
+            </div>
+            <div style="margin-bottom:1.5rem;color:#b0bec5;font-size:1rem;line-height:1.5;">La nueva IA de Google para automatización empresarial y análisis avanzado.</div>
+            <a href="https://blog.google/technology/ai/google-gemini-ai/" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.6rem 1.3rem;background:linear-gradient(135deg, #e685b5, #f06292);color:white;font-weight:600;border-radius:8px;font-size:0.9rem;text-decoration:none;box-shadow:0 3px 10px rgba(230,133,181,0.3);">
+              <span>📊</span> Ver detalles
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Automatización con Diseño Futurista -->
+      <div style="margin-bottom:3rem;">
+        <!-- Separador con Gradiente Cyan -->
+        <div style="height:2px;background:linear-gradient(90deg, transparent, #6edff6, transparent);margin:2rem 0 1.5rem 0;border-radius:1px;"></div>
+        
+        <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;">
+          <div style="background:linear-gradient(135deg, #22d3ee, #0891b2);padding:0.7rem;border-radius:12px;box-shadow:0 4px 12px rgba(110,223,246,0.3);">
+            <span style="font-size:1.4rem;color:white;">🤖</span>
+          </div>
+          <div>
+            <h2 style="color:#cffafe;margin:0;font-size:1.8rem;font-weight:700;">Automatización & Funcionalidades</h2>
+            <div style="color:#67e8f9;font-size:0.95rem;margin-top:0.2rem;">Workflows inteligentes y herramientas</div>
+          </div>
+          <div style="margin-left:auto;background:rgba(110,223,246,0.15);border:1px solid rgba(110,223,246,0.3);padding:0.4rem 1rem;border-radius:20px;color:#6edff6;font-size:0.85rem;font-weight:500;">
+            🛠️ Tools
+          </div>
+        </div>
+        
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;">
+          <div style="background:linear-gradient(135deg, #1e2932 0%, #2a3d47 100%);border-left:4px solid #6edff6;padding:1.5rem;border-radius:12px;color:#f1f3f4;box-shadow:0 6px 20px rgba(0,0,0,0.3);position:relative;overflow:hidden;">
+            <div style="position:absolute;top:-10px;right:-10px;width:60px;height:60px;background:rgba(110,223,246,0.1);border-radius:50%;"></div>
+            <div style="display:flex;align-items:flex-start;gap:1rem;margin-bottom:1rem;position:relative;z-index:2;">
+              <div style="flex-shrink:0;width:48px;height:48px;background:linear-gradient(135deg, #6edff6, #22d3ee);border-radius:12px;display:flex;align-items:center;justify-content:center;box-shadow:0 3px 12px rgba(110,223,246,0.4);">
+                <span style="font-size:1.3rem;color:white;">📊</span>
+              </div>
+              <div style="flex:1;">
+                <a href="https://www.youtube.com/watch?v=QFvKjD1bQ6U" style="color:#cffafe;font-weight:bold;font-size:1.15rem;text-decoration:none;line-height:1.3;display:block;">Automatiza reportes con Python y Google Sheets</a>
+                <div style="display:flex;align-items:center;gap:0.5rem;margin-top:0.5rem;">
+                  <span style="background:rgba(110,223,246,0.2);color:#6edff6;padding:0.2rem 0.6rem;border-radius:12px;font-size:0.75rem;font-weight:500;">Python</span>
+                  <span style="color:#67e8f9;font-size:0.85rem;">⏱️ 15 min</span>
+                  <span style="background:rgba(110,223,246,0.1);color:#6edff6;padding:0.1rem 0.5rem;border-radius:8px;font-size:0.7rem;">Tutorial</span>
+                </div>
+              </div>
+            </div>
+            <div style="margin-bottom:1.5rem;color:#b0bec5;font-size:1rem;line-height:1.5;">Tutorial paso a paso para generar y enviar reportes automáticos usando Python y Google Sheets API.</div>
+            <a href="https://www.youtube.com/watch?v=QFvKjD1bQ6U" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.6rem 1.3rem;background:linear-gradient(135deg, #6edff6, #22d3ee);color:#0f172a;font-weight:600;border-radius:8px;font-size:0.9rem;text-decoration:none;box-shadow:0 3px 10px rgba(110,223,246,0.3);">
+              <span>🎓</span> Ver tutorial
+            </a>
+          </div>
+          
+          <div style="background:linear-gradient(135deg, #1e2932 0%, #2a3d47 100%);border-left:4px solid #6edff6;padding:1.5rem;border-radius:12px;color:#f1f3f4;box-shadow:0 6px 20px rgba(0,0,0,0.3);position:relative;overflow:hidden;">
+            <div style="position:absolute;top:-10px;right:-10px;width:60px;height:60px;background:rgba(110,223,246,0.1);border-radius:50%;"></div>
+            <div style="display:flex;align-items:flex-start;gap:1rem;margin-bottom:1rem;position:relative;z-index:2;">
+              <div style="flex-shrink:0;width:48px;height:48px;background:linear-gradient(135deg, #6edff6, #22d3ee);border-radius:12px;display:flex;align-items:center;justify-content:center;box-shadow:0 3px 12px rgba(110,223,246,0.4);">
+                <span style="font-size:1.3rem;color:white;">🔗</span>
+              </div>
+              <div style="flex:1;">
+                <a href="https://www.make.com/en/" style="color:#cffafe;font-weight:bold;font-size:1.15rem;text-decoration:none;line-height:1.3;display:block;">Conecta APIs sin código con Make</a>
+                <div style="display:flex;align-items:center;gap:0.5rem;margin-top:0.5rem;">
+                  <span style="background:rgba(110,223,246,0.2);color:#6edff6;padding:0.2rem 0.6rem;border-radius:12px;font-size:0.75rem;font-weight:500;">No-Code</span>
+                  <span style="color:#67e8f9;font-size:0.85rem;">🔥 Popular</span>
+                  <span style="background:rgba(110,223,246,0.1);color:#6edff6;padding:0.1rem 0.5rem;border-radius:8px;font-size:0.7rem;">Herramienta</span>
+                </div>
+              </div>
+            </div>
+            <div style="margin-bottom:1.5rem;color:#b0bec5;font-size:1rem;line-height:1.5;">Automatiza flujos de trabajo y conecta servicios fácilmente usando Make (antes Integromat).</div>
+            <a href="https://www.make.com/en/" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.6rem 1.3rem;background:linear-gradient(135deg, #6edff6, #22d3ee);color:#0f172a;font-weight:600;border-radius:8px;font-size:0.9rem;text-decoration:none;box-shadow:0 3px 10px rgba(110,223,246,0.3);">
+              <span>🚀</span> Explorar Make
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recursos Recomendados con Diseño Elegante -->
+      <div style="margin-bottom:2rem;">
+        <!-- Separador Final -->
+        <div style="height:2px;background:linear-gradient(90deg, transparent, #f1f3f4, transparent);margin:2rem 0 1.5rem 0;border-radius:1px;"></div>
+        
+        <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;">
+          <div style="background:linear-gradient(135deg, #64748b, #475569);padding:0.7rem;border-radius:12px;box-shadow:0 4px 12px rgba(100,116,139,0.3);">
+            <span style="font-size:1.4rem;color:white;">🔗</span>
+          </div>
+          <div>
+            <h2 style="color:#f1f5f9;margin:0;font-size:1.8rem;font-weight:700;">Recursos Recomendados</h2>
+            <div style="color:#cbd5e1;font-size:0.95rem;margin-top:0.2rem;">Enlaces curados para continuar aprendiendo</div>
+          </div>
+          <div style="margin-left:auto;background:rgba(241,243,244,0.1);border:1px solid rgba(241,243,244,0.2);padding:0.4rem 1rem;border-radius:20px;color:#f1f3f4;font-size:0.85rem;font-weight:500;">
+            📚 Curated
+          </div>
+        </div>
+        
+        <div style="background:linear-gradient(135deg, #1e293b 0%, #334155 100%);padding:1.5rem;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,0.3);">
+          <div style="display:grid;gap:1rem;">
+            <div style="display:flex;align-items:center;gap:1rem;padding:1rem;background:rgba(241,243,244,0.05);border-radius:10px;border-left:3px solid #6ea8fe;">
+              <div style="flex-shrink:0;width:40px;height:40px;background:linear-gradient(135deg, #6ea8fe, #4dabf7);border-radius:8px;display:flex;align-items:center;justify-content:center;">
+                <span style="color:white;font-size:1.1rem;">💡</span>
+              </div>
+              <div style="flex:1;">
+                <a href="https://www.geeky-gadgets.com/chatgpt-smart-workflow-tips-guide-2025/" style="color:#e2e8f0;font-weight:600;text-decoration:none;font-size:1.05rem;display:block;margin-bottom:0.3rem;">ChatGPT Smart Workflow Tips (Geeky Gadgets)</a>
+                <div style="color:#94a3b8;font-size:0.9rem;">Guía completa de productividad con ChatGPT</div>
+              </div>
+              <div style="background:rgba(110,168,254,0.15);color:#6ea8fe;padding:0.3rem 0.8rem;border-radius:15px;font-size:0.8rem;font-weight:500;">Guía</div>
+            </div>
+            
+            <div style="display:flex;align-items:center;gap:1rem;padding:1rem;background:rgba(241,243,244,0.05);border-radius:10px;border-left:3px solid #7be495;">
+              <div style="flex-shrink:0;width:40px;height:40px;background:linear-gradient(135deg, #7be495, #51cf66);border-radius:8px;display:flex;align-items:center;justify-content:center;">
+                <span style="color:white;font-size:1.1rem;">📰</span>
+              </div>
+              <div style="flex:1;">
+                <a href="https://www.deeplearning.ai/thebatch/" style="color:#e2e8f0;font-weight:600;text-decoration:none;font-size:1.05rem;display:block;margin-bottom:0.3rem;">The Batch (DeepLearning.AI)</a>
+                <div style="color:#94a3b8;font-size:0.9rem;">Newsletter semanal con las últimas noticias de IA</div>
+              </div>
+              <div style="background:rgba(123,228,149,0.15);color:#7be495;padding:0.3rem 0.8rem;border-radius:15px;font-size:0.8rem;font-weight:500;">Newsletter</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- Footer -->
-    <div style="text-align:center;color:#888;font-size:.9rem;margin-top:2rem;">
-      Café con IA · Síguenos en <a href="#" style="color:#6ea8fe;">LinkedIn</a> | <a href="#" style="color:#6ea8fe;">Twitter</a>
+    <!-- Footer Mejorado -->
+    <div style="text-align:center;margin-top:2.5rem;padding:2rem 1.5rem;background:linear-gradient(135deg, #1e293b, #334155);border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.2);">
+      <div style="color:#e2e8f0;font-size:1.1rem;font-weight:600;margin-bottom:1rem;display:flex;align-items:center;justify-content:center;gap:0.5rem;">
+        <span style="font-size:1.3rem;">☕</span>
+        Café con IA
+      </div>
+      <div style="color:#94a3b8;font-size:0.9rem;margin-bottom:1.5rem;">Tu dosis diaria de inteligencia artificial</div>
+      <div style="display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;">
+        <a href="#" style="color:#6ea8fe;text-decoration:none;display:flex;align-items:center;gap:0.5rem;padding:0.5rem 1rem;background:rgba(110,168,254,0.1);border-radius:20px;font-size:0.9rem;transition:all 0.2s;">
+          <span>💼</span> LinkedIn
+        </a>
+        <a href="#" style="color:#6ea8fe;text-decoration:none;display:flex;align-items:center;gap:0.5rem;padding:0.5rem 1rem;background:rgba(110,168,254,0.1);border-radius:20px;font-size:0.9rem;transition:all 0.2s;">
+          <span>🐦</span> Twitter
+        </a>
+        <a href="#" style="color:#6ea8fe;text-decoration:none;display:flex;align-items:center;gap:0.5rem;padding:0.5rem 1rem;background:rgba(110,168,254,0.1);border-radius:20px;font-size:0.9rem;transition:all 0.2s;">
+          <span>📧</span> Suscribirte
+        </a>
+      </div>
+      <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(148,163,184,0.2);color:#64748b;font-size:0.8rem;">
+        © 2025 Café con IA. Hecho con ❤️ y mucho ☕
+      </div>
     </div>
   </div>
 </body>
