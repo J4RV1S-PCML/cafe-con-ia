@@ -1,3 +1,5 @@
+# RSS Sources - Fuentes especializadas en IA y tecnología
+# FUENTES PRINCIPALES DE NOTICIAS IA
 - https://feeds.feedburner.com/venturebeat/SZYF
 - https://www.deeplearning.ai/thebatch/feed
 - https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml
@@ -25,3 +27,91 @@
 - https://artificial-intelligence.blog/feed
 - https://a16z.com/tag/ai/feed
 - https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+
+# FUENTES ESPECIALIZADAS EN IA Y ML
+- https://distill.pub/rss.xml
+- https://anthropic.com/news/rss
+- https://huggingface.co/blog/feed.xml
+- https://stability.ai/news/rss
+- https://www.assemblyai.com/blog/rss/
+- https://www.pinecone.io/blog/rss/
+- https://www.cohere.com/blog/rss
+- https://gradient.ai/blog/rss
+- https://neptune.ai/blog/rss
+- https://wandb.ai/blog/rss
+- https://www.weights-biases.com/blog/rss
+
+# INVESTIGACIÓN Y PAPERS
+- https://arxiv.org/rss/cs.AI
+- https://arxiv.org/rss/cs.LG
+- https://arxiv.org/rss/cs.CL
+- https://arxiv.org/rss/cs.CV
+- https://paperswithcode.com/feeds/latest/
+- https://www.nature.com/subjects/machine-learning.rss
+- https://www.science.org/topic/computer-science?rss=1
+
+# EMPRESAS Y STARTUPS IA
+- https://scale.com/blog/rss
+- https://www.databricks.com/blog/rss.xml
+- https://blog.runwayml.com/rss
+- https://www.midjourney.com/blog/rss
+- https://blog.elevenlabs.io/rss
+- https://blog.perplexity.ai/rss
+- https://www.anthropic.com/blog/rss
+- https://www.inflection.ai/blog/rss
+
+# HERRAMIENTAS Y APLICACIONES
+- https://blog.langchain.dev/rss/
+- https://www.llamaindex.ai/blog/rss
+- https://blog.streamlit.io/rss/
+- https://gradio.app/blog/rss
+- https://blog.replicate.com/rss
+- https://www.cursor.sh/blog/rss
+
+# NOTICIAS TECNOLÓGICAS GENERALES
+- https://feeds.feedburner.com/oreilly/radar
+- https://hbr.org/topic/artificial-intelligence/rss
+- https://slashdot.org/slashdot.rss
+- https://spectrum.ieee.org/rss/fulltext
+- https://www.technologyreview.com/feed/
+
+# COMUNIDADES Y FOROS
+- https://www.reddit.com/r/MachineLearning/.rss
+- https://www.reddit.com/r/artificial/.rss
+- https://news.ycombinator.com/rss
+- https://lobste.rs/rss
+
+# NEWSLETTERS Y ANÁLISIS
+- https://www.theatlantic.com/feed/channel/technology/
+- https://www.economist.com/science-and-technology/rss.xml
+- https://www.forbes.com/ai/feed/
+- https://fortune.com/section/artificial-intelligence/feed/
+
+# CANALES YOUTUBE IA - FEEDS RSS AUTOMÁTICOS
+# Canales TOP en español
+- https://www.youtube.com/feeds/videos.xml?channel_id=UCy5znSnfMsDwaLlROnZ7Qbg  # DotCSV
+- https://www.youtube.com/feeds/videos.xml?channel_id=UCTomtSwJbgCCYVz0q5xh4jw  # Javi Manzano
+- https://www.youtube.com/feeds/videos.xml?channel_id=UClgNGFOGKJnzl5AXP8lVMUA  # Salvaje
+- https://www.youtube.com/feeds/videos.xml?channel_id=UCMHmB1lBLDGbYAXnB2QgjKw  # Xavier Mitjana
+- https://www.youtube.com/feeds/videos.xml?channel_id=UCgONXFYGX0BUxmJXBJOCRaQ  # Alejavi Rivera
+
+# Canales educativos IA
+- https://www.youtube.com/feeds/videos.xml?channel_id=UCf8xjz9FXzPILFKAaGKa2_A  # Joaquín Barberá Aledo
+- https://www.youtube.com/feeds/videos.xml?channel_id=UCjzm55W9E2-vTCJFKLNf0Tw  # Carlos Rodera
+- https://www.youtube.com/feeds/videos.xml?channel_id=UCtXSJxXGgKFNpSpFHCCMNAw  # NextGen IA
+- https://www.youtube.com/feeds/videos.xml?channel_id=UCyUHnByO5H6SPBfWj2y-6nA  # Gustavo Entrala
+
+# Canales internacionales relevantes
+- https://www.youtube.com/feeds/videos.xml?channel_id=UCbfYPyITQ-7l4upoX8nvctg  # Two Minute Papers
+- https://www.youtube.com/feeds/videos.xml?channel_id=UCNJ1Ymd5yFuUPtn21xtRbbw  # AI Explained
+- https://www.youtube.com/feeds/videos.xml?channel_id=UCfzlCWGWYyIQ0aLC5w48gBQ  # Sentdex
+- https://www.youtube.com/feeds/videos.xml?channel_id=UC4JX40jDee_tINbkjycV4Sg  # Tech With Tim
+- https://www.youtube.com/feeds/videos.xml?channel_id=UCNU_lfiiWBdtULKOw6X0Dig  # Krish Naik
+- https://www.youtube.com/feeds/videos.xml?channel_id=UCbMqShSKQ8hgU5FwCQo_eKQ  # Python Engineer
+
+# Canales corporativos
+- https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A  # OpenAI
+- https://www.youtube.com/feeds/videos.xml?channel_id=UCJ4FUhsKMEdHGvrvs3qVPBg  # Google AI
+- https://www.youtube.com/feeds/videos.xml?channel_id=UCUkz4_CrMyg5ZSy3W9LcGQw  # DeepMind
+- https://www.youtube.com/feeds/videos.xml?channel_id=UC0Y0yNhNPj9j3cR1OY_LMFw  # Anthropic
+- https://www.youtube.com/feeds/videos.xml?channel_id=UCGeTRFRv6qMSsOfyTHuUxrw  # Hugging Face
