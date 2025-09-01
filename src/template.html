@@ -21,8 +21,13 @@
       <h2 style="color:#7be495;margin-top:2rem;">💡 Tips & Mejores Prácticas</h2>
       <div style="display:flex;flex-wrap:wrap;gap:1rem;">
         {% for tip in tips %}
-        <div style="background:#1e2b22;border-left:4px solid #7be495;padding:1rem;border-radius:8px;flex:1 1 220px;color:#f1f3f4;">
-          <span style="font-size:1.2rem;">💡</span> {{ tip }}
+        <div style="background:#1e2b22;border-left:4px solid #7be495;padding:1rem 1.2rem;border-radius:8px;flex:1 1 280px;color:#f1f3f4;display:flex;flex-direction:column;justify-content:space-between;min-width:240px;max-width:320px;">
+          <div style="display:flex;align-items:center;gap:.7rem;">
+            <span style="font-size:1.5rem;">💡</span>
+            <a href="{{ tip.link }}" style="color:#7be495;font-weight:bold;font-size:1.08rem;text-decoration:none;">{{ tip.title }}</a>
+          </div>
+          <div style="margin:.7rem 0 .5rem 2.2rem;font-size:.98rem;">{{ tip.desc }}</div>
+          <a href="{{ tip.link }}" style="margin-left:2.2rem;color:#6ea8fe;font-size:.97rem;text-decoration:underline;">{{ tip.cta }}</a>
         </div>
         {% endfor %}
       </div>
@@ -31,9 +36,16 @@
       <!-- Tendencias -->
       {% if trends %}
       <h2 style="color:#e685b5;margin-top:2rem;">⚡ Tendencias & Avances</h2>
-      <div style="background:#2a1e2b;border-left:4px solid #e685b5;padding:1rem;border-radius:8px;color:#f1f3f4;">
+      <div style="display:flex;flex-wrap:wrap;gap:1rem;">
         {% for trend in trends %}
-          <div style="margin-bottom:.5rem;"><span style="font-size:1.2rem;">⚡</span> {{ trend }}</div>
+        <div style="background:#2a1e2b;border-left:4px solid #e685b5;padding:1rem 1.2rem;border-radius:8px;flex:1 1 280px;color:#f1f3f4;display:flex;flex-direction:column;justify-content:space-between;min-width:240px;max-width:320px;">
+          <div style="display:flex;align-items:center;gap:.7rem;">
+            <span style="font-size:1.5rem;">⚡</span>
+            <a href="{{ trend.link }}" style="color:#e685b5;font-weight:bold;font-size:1.08rem;text-decoration:none;">{{ trend.title }}</a>
+          </div>
+          <div style="margin:.7rem 0 .5rem 2.2rem;font-size:.98rem;">{{ trend.desc }}</div>
+          <a href="{{ trend.link }}" style="margin-left:2.2rem;color:#6ea8fe;font-size:.97rem;text-decoration:underline;">{{ trend.cta }}</a>
+        </div>
         {% endfor %}
       </div>
       {% endif %}
@@ -41,9 +53,16 @@
       <!-- Automatización -->
       {% if automations %}
       <h2 style="color:#6edff6;margin-top:2rem;">🤖 Automatización & Funcionalidades</h2>
-      <div style="background:#1e2932;border-left:4px solid #6edff6;padding:1rem;border-radius:8px;color:#f1f3f4;">
+      <div style="display:flex;flex-wrap:wrap;gap:1rem;">
         {% for auto in automations %}
-          <div style="margin-bottom:.5rem;"><span style="font-size:1.2rem;">🤖</span> {{ auto }}</div>
+        <div style="background:#1e2932;border-left:4px solid #6edff6;padding:1rem 1.2rem;border-radius:8px;flex:1 1 280px;color:#f1f3f4;display:flex;flex-direction:column;justify-content:space-between;min-width:240px;max-width:320px;">
+          <div style="display:flex;align-items:center;gap:.7rem;">
+            <span style="font-size:1.5rem;">🤖</span>
+            <a href="{{ auto.link }}" style="color:#6edff6;font-weight:bold;font-size:1.08rem;text-decoration:none;">{{ auto.title }}</a>
+          </div>
+          <div style="margin:.7rem 0 .5rem 2.2rem;font-size:.98rem;">{{ auto.desc }}</div>
+          <a href="{{ auto.link }}" style="margin-left:2.2rem;color:#6ea8fe;font-size:.97rem;text-decoration:underline;">{{ auto.cta }}</a>
+        </div>
         {% endfor %}
       </div>
       {% endif %}

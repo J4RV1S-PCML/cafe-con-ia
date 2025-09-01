@@ -50,16 +50,46 @@ if __name__ == "__main__":
 
         # Nuevas secciones dinámicas
         tips = [
-            "Usa prompts específicos para automatizar tareas repetitivas con ChatGPT.",
-            "Integra IA en tus flujos de trabajo con herramientas como Zapier o Make."
+            {
+                "title": "Automatiza tareas repetitivas con ChatGPT y VS Code",
+                "link": "https://www.youtube.com/watch?v=W1rVwLMieag",
+                "desc": "Aprende a integrar OpenAI Codex en VS Code para generar código y automatizar tareas con IA.",
+                "cta": "Ver video"
+            },
+            {
+                "title": "Extensión Codex para Visual Studio Code",
+                "link": "https://hipertextual.com/tecnologia/openai-codex-extension-visual-studio-code/",
+                "desc": "Descubre cómo instalar y sacar el máximo partido a la extensión oficial de OpenAI Codex en tu editor favorito.",
+                "cta": "Leer guía"
+            }
         ]
         trends = [
-            "OpenAI lanza GPT-5 con capacidades multimodales.",
-            "Google presenta Gemini para automatización empresarial."
+            {
+                "title": "OpenAI lanza GPT-5",
+                "link": "https://openai.com/blog/gpt-5/",
+                "desc": "GPT-5 llega con capacidades multimodales y mejoras en comprensión contextual.",
+                "cta": "Leer más"
+            },
+            {
+                "title": "Google presenta Gemini",
+                "link": "https://blog.google/technology/ai/google-gemini-ai/",
+                "desc": "La nueva IA de Google para automatización empresarial y análisis avanzado.",
+                "cta": "Ver detalles"
+            }
         ]
         automations = [
-            "Automatiza reportes semanales con Python y Google Sheets.",
-            "Usa Make para conectar APIs sin código."
+            {
+                "title": "Automatiza reportes con Python y Google Sheets",
+                "link": "https://www.youtube.com/watch?v=QFvKjD1bQ6U",
+                "desc": "Tutorial paso a paso para generar y enviar reportes automáticos usando Python y Google Sheets API.",
+                "cta": "Ver tutorial"
+            },
+            {
+                "title": "Conecta APIs sin código con Make",
+                "link": "https://www.make.com/en/",
+                "desc": "Automatiza flujos de trabajo y conecta servicios fácilmente usando Make (antes Integromat).",
+                "cta": "Explorar Make"
+            }
         ]
         resources = [
             {"title": "ChatGPT Smart Workflow Tips (Geeky Gadgets)", "link": "https://www.geeky-gadgets.com/chatgpt-smart-workflow-tips-guide-2025/"},
@@ -67,7 +97,7 @@ if __name__ == "__main__":
         ]
         date = datetime.date.today().strftime("%d/%m/%Y")
         html = Template(open("src/template.html").read()).render(
-            stories=stories,
+            stories=stories[:10],
             tips=tips,
             trends=trends,
             automations=automations,
