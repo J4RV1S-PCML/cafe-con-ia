@@ -48,15 +48,38 @@ if __name__ == "__main__":
         else:
             print("DEBUG stories: No stories found.", flush=True)
 
-        prompts = [
-            "Prompt 1: ¿Cómo automatizar tus tareas repetitivas hoy con IA?",
-            "Prompt 2: Crea un mini-curso de 30 min con ChatGPT y Notion."
+        # Nuevas secciones dinámicas
+        tips = [
+            "Usa prompts específicos para automatizar tareas repetitivas con ChatGPT.",
+            "Integra IA en tus flujos de trabajo con herramientas como Zapier o Make."
+        ]
+        trends = [
+            "OpenAI lanza GPT-5 con capacidades multimodales.",
+            "Google presenta Gemini para automatización empresarial."
+        ]
+        automations = [
+            "Automatiza reportes semanales con Python y Google Sheets.",
+            "Usa Make para conectar APIs sin código."
+        ]
+        resources = [
+            {"title": "ChatGPT Smart Workflow Tips (Geeky Gadgets)", "link": "https://www.geeky-gadgets.com/chatgpt-smart-workflow-tips-guide-2025/"},
+            {"title": "The Batch (DeepLearning.AI)", "link": "https://www.deeplearning.ai/thebatch/"}
         ]
         date = datetime.date.today().strftime("%d/%m/%Y")
-        html = Template(open("src/template.html").read()).render(stories=stories, prompts=prompts, date=date)
+        html = Template(open("src/template.html").read()).render(
+            stories=stories,
+            tips=tips,
+            trends=trends,
+            automations=automations,
+            resources=resources,
+            date=date
+        )
         text = f"Café con IA – {date}\n" + \
                "\n".join(f"- {s['title']}: {s['link']}" for s in stories) + \
-               "\n\nPrompts:\n" + "\n".join(prompts)
+               "\n\nTips:\n" + "\n".join(tips) + \
+               "\n\nTendencias:\n" + "\n".join(trends) + \
+               "\n\nAutomatización:\n" + "\n".join(automations) + \
+               "\n\nRecursos:\n" + "\n".join(f"{r['title']}: {r['link']}" for r in resources)
         print("DEBUG: About to login to SMTP", flush=True)
         print("DEBUG: GMAIL_USER =", GMAIL_USER, flush=True)
         print("DEBUG: GMAIL_PASS length =", len(GMAIL_PASS) if GMAIL_PASS else 0, flush=True)
