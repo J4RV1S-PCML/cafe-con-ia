@@ -70,9 +70,9 @@ if __name__ == "__main__":
         )
         text = f"Café con IA – {date}\n" + \
                "\n".join(f"- {s['title']}: {s['link']}" for s in stories) + \
-               "\n\nTips:\n" + "\n".join(tips) + \
-               "\n\nTendencias:\n" + "\n".join(trends) + \
-               "\n\nAutomatización:\n" + "\n".join(automations) + \
+               "\n\nTips:\n" + "\n".join(f"- {tip['title']}: {tip['link']}" for tip in tips) + \
+               "\n\nTendencias:\n" + "\n".join(f"- {trend['title']}: {trend['link']}" for trend in trends) + \
+               "\n\nAutomatización:\n" + "\n".join(f"- {auto['title']}: {auto['link']}" for auto in automations) + \
                "\n\nRecursos:\n" + "\n".join(f"{r['title']}: {r['link']}" for r in resources)
         print("DEBUG: About to login to SMTP", flush=True)
         print("DEBUG: GMAIL_USER =", GMAIL_USER, flush=True)
