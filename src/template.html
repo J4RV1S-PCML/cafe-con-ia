@@ -9,10 +9,23 @@
     <!-- Noticias -->
     <div style="background:#23272f;padding:1.5rem;border-radius:0 0 12px 12px;box-shadow:0 2px 8px #0003;">
       <h2 style="color:#6ea8fe;margin-top:0;">📰 Top Noticias</h2>
+      <div style="margin-bottom:1.2rem;color:#b0b8c1;font-size:1.08rem;line-height:1.6;">
+        Las noticias más relevantes y frescas del mundo de la IA, seleccionadas para ti cada día. ¡Haz clic en cada titular o en el botón para leer más!
+      </div>
       {% for s in stories[:10] %}
-        <div style="border:1px solid #2c313a;border-radius:8px;padding:1.2rem 1rem;margin:1.2rem 0;box-shadow:0 1px 4px #0003;background:#22223b;">
-          <a href="{{ s.link }}" style="font-weight:bold;font-size:1.13rem;color:#6ea8fe;text-decoration:none;">{{ s.title }}</a>
-          <div style="color:#f1f3f4;margin:.7rem 0 0 0;line-height:1.5;">{{ s.summary }}</div>
+        <div style="border:1px solid #2c313a;border-radius:10px;padding:1.3rem 1.2rem;margin:2.1rem 0 2.1rem 0;box-shadow:0 2px 8px #0003;background:#22223b;display:flex;flex-direction:column;gap:0.7rem;">
+          <div style="display:flex;align-items:flex-start;gap:1rem;">
+            <div style="flex-shrink:0;width:32px;height:32px;background:#23272f;border-radius:6px;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 4px #0003;">
+              <span style="font-size:1.4rem;">📰</span>
+            </div>
+            <div style="flex:1;">
+              <a href="{{ s.link }}" style="font-weight:bold;font-size:1.18rem;color:#6ea8fe;text-decoration:none;line-height:1.3;">{{ s.title }}</a>
+            </div>
+          </div>
+          <div style="color:#e2e6ea;font-size:1.04rem;line-height:1.6;margin-left:2.7rem;">{{ s.summary }}</div>
+          <div style="margin-left:2.7rem;margin-top:.2rem;">
+            <a href="{{ s.link }}" style="display:inline-block;padding:.45em 1.2em;background:#6ea8fe;color:#181a1b;font-weight:600;border-radius:6px;font-size:.98rem;text-decoration:none;box-shadow:0 1px 4px #0002;">Leer más</a>
+          </div>
         </div>
       {% endfor %}
 
@@ -21,13 +34,15 @@
       <h2 style="color:#7be495;margin-top:2rem;">💡 Tips & Mejores Prácticas</h2>
       <div style="display:flex;flex-wrap:wrap;gap:1rem;">
         {% for tip in tips %}
-        <div style="background:#1e2b22;border-left:4px solid #7be495;padding:1rem 1.2rem;border-radius:8px;flex:1 1 280px;color:#f1f3f4;display:flex;flex-direction:column;justify-content:space-between;min-width:240px;max-width:320px;">
-          <div style="display:flex;align-items:center;gap:.7rem;">
+        <div style="background:#1e2b22;border-left:4px solid #7be495;padding:1.3rem 1.2rem;border-radius:10px;flex:1 1 280px;color:#f1f3f4;display:flex;flex-direction:column;gap:.7rem;justify-content:space-between;min-width:240px;max-width:320px;margin-bottom:1.5rem;box-shadow:0 2px 8px #0002;">
+          <div style="display:flex;align-items:center;gap:1rem;">
             {% if tip.image %}<img src="{{ tip.image }}" alt="" style="width:38px;height:38px;border-radius:6px;object-fit:cover;box-shadow:0 1px 4px #0003;">{% else %}<span style="font-size:1.5rem;">💡</span>{% endif %}
-            <a href="{{ tip.link }}" style="color:#7be495;font-weight:bold;font-size:1.08rem;text-decoration:none;">{{ tip.title }}</a>
+            <a href="{{ tip.link }}" style="color:#7be495;font-weight:bold;font-size:1.09rem;text-decoration:none;line-height:1.3;">{{ tip.title }}</a>
           </div>
-          <div style="margin:.7rem 0 .5rem 2.2rem;font-size:.98rem;">{{ tip.desc }}</div>
-          <a href="{{ tip.link }}" style="margin-left:2.2rem;color:#6ea8fe;font-size:.97rem;text-decoration:underline;">{{ tip.cta }}</a>
+          <div style="margin-left:2.7rem;color:#e2e6ea;font-size:1.01rem;line-height:1.5;">{{ tip.desc }}</div>
+          <div style="margin-left:2.7rem;margin-top:.2rem;">
+            <a href="{{ tip.link }}" style="display:inline-block;padding:.38em 1.1em;background:#6ea8fe;color:#181a1b;font-weight:600;border-radius:6px;font-size:.97rem;text-decoration:none;box-shadow:0 1px 4px #0002;">{{ tip.cta }}</a>
+          </div>
         </div>
         {% endfor %}
       </div>
@@ -38,13 +53,15 @@
       <h2 style="color:#e685b5;margin-top:2rem;">⚡ Tendencias & Avances</h2>
       <div style="display:flex;flex-wrap:wrap;gap:1rem;">
         {% for trend in trends %}
-        <div style="background:#2a1e2b;border-left:4px solid #e685b5;padding:1rem 1.2rem;border-radius:8px;flex:1 1 280px;color:#f1f3f4;display:flex;flex-direction:column;justify-content:space-between;min-width:240px;max-width:320px;">
-          <div style="display:flex;align-items:center;gap:.7rem;">
+        <div style="background:#2a1e2b;border-left:4px solid #e685b5;padding:1.3rem 1.2rem;border-radius:10px;flex:1 1 280px;color:#f1f3f4;display:flex;flex-direction:column;gap:.7rem;justify-content:space-between;min-width:240px;max-width:320px;margin-bottom:1.5rem;box-shadow:0 2px 8px #0002;">
+          <div style="display:flex;align-items:center;gap:1rem;">
             {% if trend.image %}<img src="{{ trend.image }}" alt="" style="width:38px;height:38px;border-radius:6px;object-fit:cover;box-shadow:0 1px 4px #0003;">{% else %}<span style="font-size:1.5rem;">⚡</span>{% endif %}
-            <a href="{{ trend.link }}" style="color:#e685b5;font-weight:bold;font-size:1.08rem;text-decoration:none;">{{ trend.title }}</a>
+            <a href="{{ trend.link }}" style="color:#e685b5;font-weight:bold;font-size:1.09rem;text-decoration:none;line-height:1.3;">{{ trend.title }}</a>
           </div>
-          <div style="margin:.7rem 0 .5rem 2.2rem;font-size:.98rem;">{{ trend.desc }}</div>
-          <a href="{{ trend.link }}" style="margin-left:2.2rem;color:#6ea8fe;font-size:.97rem;text-decoration:underline;">{{ trend.cta }}</a>
+          <div style="margin-left:2.7rem;color:#e2e6ea;font-size:1.01rem;line-height:1.5;">{{ trend.desc }}</div>
+          <div style="margin-left:2.7rem;margin-top:.2rem;">
+            <a href="{{ trend.link }}" style="display:inline-block;padding:.38em 1.1em;background:#6ea8fe;color:#181a1b;font-weight:600;border-radius:6px;font-size:.97rem;text-decoration:none;box-shadow:0 1px 4px #0002;">{{ trend.cta }}</a>
+          </div>
         </div>
         {% endfor %}
       </div>
@@ -55,13 +72,15 @@
       <h2 style="color:#6edff6;margin-top:2rem;">🤖 Automatización & Funcionalidades</h2>
       <div style="display:flex;flex-wrap:wrap;gap:1rem;">
         {% for auto in automations %}
-        <div style="background:#1e2932;border-left:4px solid #6edff6;padding:1rem 1.2rem;border-radius:8px;flex:1 1 280px;color:#f1f3f4;display:flex;flex-direction:column;justify-content:space-between;min-width:240px;max-width:320px;">
-          <div style="display:flex;align-items:center;gap:.7rem;">
+        <div style="background:#1e2932;border-left:4px solid #6edff6;padding:1.3rem 1.2rem;border-radius:10px;flex:1 1 280px;color:#f1f3f4;display:flex;flex-direction:column;gap:.7rem;justify-content:space-between;min-width:240px;max-width:320px;margin-bottom:1.5rem;box-shadow:0 2px 8px #0002;">
+          <div style="display:flex;align-items:center;gap:1rem;">
             {% if auto.image %}<img src="{{ auto.image }}" alt="" style="width:38px;height:38px;border-radius:6px;object-fit:cover;box-shadow:0 1px 4px #0003;">{% else %}<span style="font-size:1.5rem;">🤖</span>{% endif %}
-            <a href="{{ auto.link }}" style="color:#6edff6;font-weight:bold;font-size:1.08rem;text-decoration:none;">{{ auto.title }}</a>
+            <a href="{{ auto.link }}" style="color:#6edff6;font-weight:bold;font-size:1.09rem;text-decoration:none;line-height:1.3;">{{ auto.title }}</a>
           </div>
-          <div style="margin:.7rem 0 .5rem 2.2rem;font-size:.98rem;">{{ auto.desc }}</div>
-          <a href="{{ auto.link }}" style="margin-left:2.2rem;color:#6ea8fe;font-size:.97rem;text-decoration:underline;">{{ auto.cta }}</a>
+          <div style="margin-left:2.7rem;color:#e2e6ea;font-size:1.01rem;line-height:1.5;">{{ auto.desc }}</div>
+          <div style="margin-left:2.7rem;margin-top:.2rem;">
+            <a href="{{ auto.link }}" style="display:inline-block;padding:.38em 1.1em;background:#6ea8fe;color:#181a1b;font-weight:600;border-radius:6px;font-size:.97rem;text-decoration:none;box-shadow:0 1px 4px #0002;">{{ auto.cta }}</a>
+          </div>
         </div>
         {% endfor %}
       </div>
