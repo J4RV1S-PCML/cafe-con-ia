@@ -9,10 +9,10 @@
     <!-- Noticias -->
     <div style="background:#23272f;padding:1.5rem;border-radius:0 0 12px 12px;box-shadow:0 2px 8px #0003;">
       <h2 style="color:#6ea8fe;margin-top:0;">📰 Top Noticias</h2>
-      {% for s in stories %}
-        <div style="border:1px solid #2c313a;border-radius:8px;padding:1rem;margin:1rem 0;box-shadow:0 1px 4px #0003;background:#22223b;">
-          <a href="{{ s.link }}" style="font-weight:bold;font-size:1.1rem;color:#6ea8fe;text-decoration:none;">{{ s.title }}</a>
-          <div style="color:#f1f3f4;margin:.5rem 0;">{{ s.summary }}</div>
+      {% for s in stories[:10] %}
+        <div style="border:1px solid #2c313a;border-radius:8px;padding:1.2rem 1rem;margin:1.2rem 0;box-shadow:0 1px 4px #0003;background:#22223b;">
+          <a href="{{ s.link }}" style="font-weight:bold;font-size:1.13rem;color:#6ea8fe;text-decoration:none;">{{ s.title }}</a>
+          <div style="color:#f1f3f4;margin:.7rem 0 0 0;line-height:1.5;">{{ s.summary }}</div>
         </div>
       {% endfor %}
 
